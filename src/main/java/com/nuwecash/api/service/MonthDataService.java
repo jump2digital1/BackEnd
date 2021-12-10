@@ -1,5 +1,6 @@
 package com.nuwecash.api.service;
 
+import com.nuwecash.api.dto.MonthData;
 import com.nuwecash.api.dto.MonthsGraficsDto;
 import com.nuwecash.api.model.Month;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +17,14 @@ public class MonthDataService {
         List<Month> months = monthService.getAllMonths();
         List<MonthsGraficsDto> monthsGraficsDtos = new ArrayList<>();
         for(Month m: months){
-          monthsGraficsDtos.add(new MonthsGraficsDto());
+          monthsGraficsDtos.add(new MonthsGraficsDto(m.getNameUUID(), m.getRequestedMoney(), m.getTotalUsers()));
         }
+        
         return monthsGraficsDtos;
     };
+    public MonthData getMonthData(String nameUUID) throws Exception {
+    	Month m = monthService.getMonth(nameUUID);
+    	
+    	return new MonthData(m.getAceptedRequestPaid(),m.getLoanReturnTime(),m.getRealBudget());
+    }
 }

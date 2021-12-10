@@ -5,7 +5,14 @@ public class MonthData {
     private String loanReturnTime;
     private double budget;
 
-    public int getAcceptedRequests() {
+    public MonthData(int acceptedRequests, String loanReturnTime, double budget) {
+		super();
+		this.acceptedRequests = acceptedRequests;
+		this.loanReturnTime = loanReturnTime;
+		this.budget = budget;
+	}
+
+	public int getAcceptedRequests() {
         return acceptedRequests;
     }
 

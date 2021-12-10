@@ -6,7 +6,14 @@ public class MonthsGraficsDto {
     private double requestedMoney;
     private int totalUsers;
 
-    public String getMonth() {
+    public MonthsGraficsDto(String month, double requestedMoney, int totalUsers) {
+		super();
+		this.month = month;
+		this.requestedMoney = requestedMoney;
+		this.totalUsers = totalUsers;
+	}
+
+	public String getMonth() {
         return month;
     }
 

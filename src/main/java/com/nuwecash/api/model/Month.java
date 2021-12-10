@@ -12,41 +12,41 @@ public class Month {
 	
 
 	@Id
-	@Column(name="nameuuid",nullable = false, length = 30)
+	@Column(name="nameuuid", length = 30)
 	private String nameUUID;
 	
-	@Column(name="name",nullable = false, length = 30)
+	@Column(name="name", length = 30)
 	private String name;
 	
 
 	
-	@Column(name="totalusers",nullable = false)
+	@Column(name="totalusers")
 	private int totalUsers;
 	
-	@Column(name="totalnewusers",nullable = false)
+	@Column(name="totalnewusers")
 	private int totalNewUsers;
 	
-	@Column(name="totaluniqueusers",nullable = false)
+	@Column(name="totaluniqueusers")
 	private int totalUniqueUsers;
 	
-	@Column(name="requestedmoney",nullable = false)
+	@Column(name="requestedmoney")
 	private double requestedMoney;
-	@Column(name="peruserrequestedmoney",nullable = false)
+	@Column(name="peruserrequestedmoney")
 	private double perUserRequestedMoney;
 	
-	@Column(name="aceptedrequestpaid",nullable = false, length = 30)
-	private String aceptedRequestPaid;
+	@Column(name="aceptedrequestpaid", length = 30)
+	private int aceptedRequestPaid;
 	
-	@Column(name="acceptedrequestunpaid",nullable = false, length = 30)
-	private String acceptedRequestunpaid;
+	@Column(name="acceptedrequestunpaid", length = 30)
+	private int acceptedRequestunpaid;
 	
-	@Column(name="loanreturntime",nullable = false, length = 30)
+	@Column(name="loanreturntime", length = 30)
 	private String loanReturnTime;
 	
-	@Column(name="realbudget",nullable = false)
+	@Column(name="realbudget")
 	private double realBudget;
 	
-	@Column(name="predictedbudget",nullable = false)
+	@Column(name="predictedbudget")
 	private double predictedBudget;
 
 	public Month() {
@@ -101,19 +101,19 @@ public class Month {
 		this.requestedMoney = requestedMoney;
 	}
 
-	public String getAceptedRequestPaid() {
+	public int getAceptedRequestPaid() {
 		return aceptedRequestPaid;
 	}
 
-	public void setAceptedRequestPaid(String aceptedRequestPaid) {
+	public void setAceptedRequestPaid(int aceptedRequestPaid) {
 		this.aceptedRequestPaid = aceptedRequestPaid;
 	}
 
-	public String getAcceptedRequestunpaid() {
+	public int getAcceptedRequestunpaid() {
 		return acceptedRequestunpaid;
 	}
 
-	public void setAcceptedRequestunpaid(String acceptedRequestunpaid) {
+	public void setAcceptedRequestunpaid(int acceptedRequestunpaid) {
 		this.acceptedRequestunpaid = acceptedRequestunpaid;
 	}
 
