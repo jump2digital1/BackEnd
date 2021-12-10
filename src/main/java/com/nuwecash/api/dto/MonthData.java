@@ -1,6 +1,6 @@
 package com.nuwecash.api.dto;
 
-public class monthData {
+public class MonthData {
     private int acceptedRequests;
     private String loanReturnTime;
     private double budget;

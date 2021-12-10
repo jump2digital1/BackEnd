@@ -2,8 +2,7 @@ package com.nuwecash.api.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -32,6 +31,8 @@ public class Month {
 	
 	@Column(name="requestedmoney",nullable = false)
 	private double requestedMoney;
+	@Column(name="peruserrequestedmoney",nullable = false)
+	private double perUserRequestedMoney;
 	
 	@Column(name="aceptedrequestpaid",nullable = false, length = 30)
 	private String aceptedRequestPaid;
@@ -139,6 +140,20 @@ public class Month {
 	public void setPredictedBudget(double predictedBudget) {
 		this.predictedBudget = predictedBudget;
 	}
-	
-	
+
+	public String getNameUUID() {
+		return nameUUID;
+	}
+
+	public void setNameUUID(String nameUUID) {
+		this.nameUUID = nameUUID;
+	}
+
+	public double getPerUserRequestedMoney() {
+		return perUserRequestedMoney;
+	}
+
+	public void setPerUserRequestedMoney(double perUserRequestedMoney) {
+		this.perUserRequestedMoney = perUserRequestedMoney;
+	}
 }
